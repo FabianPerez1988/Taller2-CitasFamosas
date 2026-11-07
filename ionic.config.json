@@ -1,0 +1,7 @@
+{
+  "name": "CitasFamosas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
