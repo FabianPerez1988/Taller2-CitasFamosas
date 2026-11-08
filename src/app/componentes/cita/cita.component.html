@@ -1,0 +1,17 @@
+
+<ion-item>
+
+  <ion-label>
+    <h2>{{ cita.texto }}</h2>
+    <p>— {{ cita.autor }}</p>
+  </ion-label>
+
+  <ion-button
+    *ngIf="permitirEliminar"
+    slot="end"
+    color="danger"
+    (click)="eliminar()">
+    Eliminar
+  </ion-button>
+
+</ion-item>

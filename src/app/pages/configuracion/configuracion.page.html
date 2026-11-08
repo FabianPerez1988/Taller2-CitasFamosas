@@ -1,0 +1,47 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Configuración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-button
+    expand="block"
+    (click)="volverInicio()">
+    Volver al inicio
+  </ion-button>
+
+  <h2>Preferencias de la aplicación</h2>
+
+  <p>
+    Personaliza las opciones de Citas Famosas.
+  </p>
+
+  <ion-item *ngIf="configuracionCargada">
+
+    <ion-toggle
+      [ngModel]="permitirEliminar"
+      (ngModelChange)="guardarConfiguracion($event)"
+      labelPlacement="start"
+      justify="space-between">
+
+      Permitir eliminar citas
+
+    </ion-toggle>
+
+  </ion-item>
+
+  <p
+    class="ion-padding"
+    *ngIf="configuracionCargada">
+
+    Estado:
+    <strong>
+      {{ permitirEliminar ? 'Activado' : 'Desactivado' }}
+    </strong>
+
+  </p>
+
+</ion-content>
